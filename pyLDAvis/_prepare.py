@@ -58,11 +58,6 @@ def _input_check(topic_term_dists, doc_topic_dists, doc_lengths, vocab, term_fre
                    'number of terms in the vocabulary (len of vocab)')
         err(err_msg)
 
-    if __num_dist_rows__(topic_term_dists) != ttds[0]:
-        err('Not all rows (distributions) in topic_term_dists sum to 1.')
-
-    if __num_dist_rows__(doc_topic_dists) != dtds[0]:
-        err('Not all rows (distributions) in doc_topic_dists sum to 1.')
 
     if len(errors) > 0:
         return errors
